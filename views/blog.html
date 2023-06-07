@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <title>Blog</title>
+        <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" 
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="public/css/form-blog.css">
+        <link rel="stylesheet" href="public/css/index.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-black">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img class="icon-img" src="public/Image/JR.jpg"/>
+                </a>
+                <button 
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarToggle01"
+                aria-control="navbarToggle01"
+                aria-expanded="false"
+                aria-label="Toggle Navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarToggle01">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a 
+                            class="nav-link text-white fw-bold box-shadow" 
+                            arial-current="page" 
+                            href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a 
+                            class="nav-link text-blue fw-bold" 
+                            href="blog-detail"
+                            arial-current="page">Blog</a>
+                        </li>
+                    </ul>
+                    <a href="contact" class="btn bg-blue text-white px-2">Contact Me</a>
+                </div>
+            </div>
+        </nav>
+
+        {{if .Login}}
+        <div style="margin-top: 50px; text-align: end; margin-right: 210px;;">
+            <a
+            style="
+                border-radius: 10px;
+                background-color: orangered;
+                padding: 10px 20px;
+                color: white;
+                text-decoration: none;"
+            href="/form-blog"
+            >Add Blog
+            </a> 
+        </div>
+        {{end}}
+
+        <div>
+            <div>
+                <div class="d-flex container bg-step bg-white container-sm responsive">
+                    <div>
+                        <img style="width: 200px; border-radius: 10px;" src="public/Image/yamada.jpg"/>
+                    </div>
+                    <div class="blog-content">
+                        <div style="margin-left: 460px;" class="btn-group">
+                          <button style="background-color: gray; border: none; border-radius: 8px; padding: 5px 20px; color: white;" class="btn-edit">Edit Post</button>
+                          <button style="background-color: red; border: none; border-radius: 8px; padding: 5px 10px; color: white;" class="btn-delete">Delete Post</button>
+                        </div>
+                        <h1 class="ms-4">
+                          <a style="text-decoration: none; color: darkred;" href="blog-detail" target="_blank"
+                            >Yamada is Pro Player in Game</a
+                          >
+                        </h1>
+                        <div class="ms-4 detail-blog-content">
+                          25 August 2025 22:30 WIB | Alexandria
+                        </div>
+                        <p class="ms-4">
+                          Ketimpangan sumber daya manusia (SDM) di sektor digital masih
+                          menjadi isu yang belum terpecahkan. Berdasarkan penelitian
+                          ManpowerGroup, ketimpangan SDM global, termasuk Indonesia,
+                          meningkat dua kali lipat dalam satu dekade terakhir. Lorem ipsum,
+                          dolor sit amet consectetur adipisicing elit. Quam, molestiae
+                          numquam! Deleniti maiores expedita eaque deserunt quaerat! Dicta,
+                          eligendi debitis?
+                        </p>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
